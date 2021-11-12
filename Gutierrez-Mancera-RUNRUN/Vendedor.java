@@ -6,5 +6,8 @@
 publilc class Vendedor{
 
   //Atributos
-  private String ;
+  private int autosEnVenta;
+  private int autosVendidos;
+  
+  
 }
