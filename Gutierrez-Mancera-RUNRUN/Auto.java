@@ -6,7 +6,7 @@
 public class Auto{
   //Atributos
   private String color;
-  private String modelo;
+  private int modelo;
   private String transmision;
   private String equipacion;
   private String nombre;
@@ -38,7 +38,7 @@ public class Auto{
   /**
   *Metodo que devuelve el modelo del auto
   **/
-  public String getModelo(){
+  public int getModelo(){
     return this.modelo;
   }
   /**
@@ -73,7 +73,7 @@ public class Auto{
   public void setColor(String color){
     this.color=color;
   }
-  public void setModelo(String modelo){
+  public void setModelo(int modelo){
     this.modelo=modelo;
   }
   public void setTransmision(String transmision){
@@ -81,6 +81,7 @@ public class Auto{
   }
   public void setEquipacion(String equipacion){
     this.equipacion=equipacion;
+  }
   }
   
   
