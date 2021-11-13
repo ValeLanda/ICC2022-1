@@ -82,11 +82,11 @@ public class Auto{
   public void setEquipacion(String equipacion){
     this.equipacion=equipacion;
   }
-  }
-  
+   
   
   //Metodo toStriing
   
   public String toString(){
-    return "El auto "+nombre+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", equipacion "+equipacion+", y tiene un precio de "+precio+" pesos."
+    return "El auto "+nombre+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", equipacion "+equipacion+", y tiene un precio de "+precio+" pesos.";
+    }
 }
