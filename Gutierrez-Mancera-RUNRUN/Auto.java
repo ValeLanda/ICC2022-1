@@ -12,7 +12,7 @@ public class Auto{
   private String nombre;
   private double precio;
   //Constructor con args
-  public Auto(String nombre,String color,String modelo, String transmision, String equipacion,double precio){
+  public Auto(String nombre,String color,int modelo, String transmision, String equipacion,double precio){
     this.nombre=nombre;
     this.color=color;
     this.modelo=modelo;
