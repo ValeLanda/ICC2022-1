@@ -8,16 +8,15 @@ public class Auto{
   private String color;
   private int modelo;
   private String transmision;
-  private String equipacion;
   private String nombre;
   private double precio;
   //Constructor con args
-  public Auto(String nombre,String color,int modelo, String transmision, String equipacion,double precio){
+  public Auto(String nombre,String color,int modelo, String transmision,double precio){
     this.nombre=nombre;
     this.color=color;
     this.modelo=modelo;
     this.transmision=transmision;
-    this.equipacion=equipacion;
+   
     this.precio=precio;
   }
   //Metodos Guetters
@@ -46,14 +45,7 @@ public class Auto{
   *@return El tipo de transmision del auto
   **/
   public String getTransmision(){
-    return this.transmicion;
-  }
-  /**
-  *Metodo que devuelve el tipo de transmision del auto
-  *@return El tipo de equipamiento del auto
-  **/
-  public String getEquipacion(){
-    return this.equipacion;
+    return this.transmision;
   }
   /**
   *Metodo que devuelve el precio del auto
@@ -79,14 +71,12 @@ public class Auto{
   public void setTransmision(String transmision){
     this.transmision=transmision;
   }
-  public void setEquipacion(String equipacion){
-    this.equipacion=equipacion;
-  }
+ 
    
   
   //Metodo toStriing
   
   public String toString(){
-    return "El auto "+nombre+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", equipacion "+equipacion+", y tiene un precio de "+precio+" pesos.";
+    return "El auto "+nombre+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", y tiene un precio de "+precio+" pesos.";
     }
 }
