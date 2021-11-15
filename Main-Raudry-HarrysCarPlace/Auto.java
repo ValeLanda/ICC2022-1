@@ -1,7 +1,7 @@
 /**
  * Clase que modela un auto
- * @author Asahel Main
- * @version version 1.0
+ * @author Asahel Main, Arsenio Raudry
+ * @version version 1.1
  */
 
 public class Auto{
@@ -12,12 +12,17 @@ public class Auto{
     //El color del automovil
     private String color;
     
-    //La fecha de fabricacion
+    //La fecha de fabricacion del automovil
     private String fechaDeFabricacion;
 
-    //Si el automovil es automatico o estandar
-    private bool esAutomatico;
+    //El precio del automovil
+    private double precio;
 
+    //Si el auto está disponible
+    private boolean disponibilidad;
+
+    //El nombre del vendedor del auto
+    private String vendedor;
 
     //Constructores
 
@@ -26,13 +31,15 @@ public class Auto{
      * @param modelo El modelo del automovil
      * @param color El color del automovil
      * @param fechaDeFabricacion La fecha de fabricacion del auto
-     * @param esAutomatico Si el auto es automatico o estandar
+     * @param precio El precio del automovil
+     * A disponibilidad se le asigna el valor de true
      */
-    public Auto(String modelo, String color, String fechaDeFabricacion, bool esAutomatico){
+    public Auto(String modelo, String color, String fechaDeFabricacion, double precio){
 	this.modelo = modelo;
 	this.color = color;
 	this.fechaDeFabricacion = fechaDeFabricacion;
-	this.esAutomatico = esAutomatico;
+	this.precio = precio;
+	this.disponibilidad = true;
     }
 
     /**
@@ -40,12 +47,19 @@ public class Auto{
      * A modelo se le asigna "Tsuru"
      * A color se le asigna "Arcoiris"
      * A fechaDeFabricacion se le asigna "1988"
-     * A esAutomatico se le asigna el valor de false
+     * A precio se le asigna 100000
+     * A disponibilidad se le asigna el valor de true
      */
     public Auto(){
-	this("Tsuru", "Arcoiris", "1988", false);
+	this("Tsuru", "Arcoiris", "1988", 100000);
     }
 
+    public Auto(Auto auto){
+	this.modelo = auto.modelo;
+	this.color = auto.color;
+	this.fechaDeFabricacion = auto.fechaDeFabricacion;
+	this.precio = auto.precio;
+    }
 
     /**
      * Metodo que regresa el modelo del automovil
@@ -60,7 +74,7 @@ public class Auto{
      * @param modelo El nuevo modelo
      */
     public void setModelo(String modelo){
-	this.modelo = modelo
+	this.modelo = modelo;
     }
 
     /**
@@ -76,7 +90,7 @@ public class Auto{
      * @param color El nuevo color del automovil
      */
     public void setColor(String color){
-	this.color = color
+	this.color = color;
     }
 
     /**
@@ -97,27 +111,57 @@ public class Auto{
 
     
     /**
-     * Metodo que regresa si el auto es automatico 
-     * @return El valor de verdad de si el auto es automatico
+     * Metodo que regresa el precio del automovil 
+     * @return El precio del automovil
      */
-    public bool getEsAutomatico(){
-	return this.esAutomatico;
+    public double getPrecio(){
+	return this.precio;
     }
 
 
     /**
-     * Metodo que modifica si el auto es automatico
-     * @param esAutomatico El nuevo valor de verdad de si el auto es automatico 
+     * Metodo que modifica el precio del automovil
+     * @param precio El nuevo precio del automovil 
      */
-    public void setEsAutomatico(bool esAutomatico){
-	this.esAutomatico = esAutomatico;
+    public void setPrecio(double precio){
+	this.precio = precio;
     }
 
+    /**
+     * Metodo que regresa la disponibilidad del automovil
+     * @return La disponibilidad del automovil
+     */
+    public boolean getDisponibilidad(){
+	return this.disponibilidad;
+    }
+
+    /**
+     * Metodo que modifica la disponibilidad del automovil
+     * @param disponibilidad El nuevo valor de disponibilidad del automovil
+     */
+    public void setDisponibilidad(boolean disponibilidad){
+	this.disponibilidad = disponibilidad;
+    }
+    /**
+     * Metodo que devuelve el nombre del vendedor del auto
+     * @return El nombre del vendedor del auto
+     */
+    public String getVendedor(){
+	return this.vendedor;
+    }
+    /**
+     * Metodo que modifica el nombre del vendedor actual del auto
+     * @param nombre El nuevo nombre del nuevo vendedor
+     */
+    public void setVendedor(String nombre){
+	this.vendedor = nombre;
+    }
     /**
      * Metodo toString que muestra al objeto de la clase Auto en forma de String
      * @return El objeto de la clase Auto en forma de String
      */
     public String toString(){
-	return "Este es un objeto de la clase Auto\n Modelo: " + this.modelo + "\n Color: " + this.color + "\n Fecha de fabriacion: " + this.fechaDeFabricacion + "\n Es automatico: " + this.esAutomatico;
+	return "Modelo: " + this.modelo + "\n Color: " + this.color + "\n Fecha de fabriacion: " + this.fechaDeFabricacion + "\n Precio: " + this.precio;
     }
+    
 }
