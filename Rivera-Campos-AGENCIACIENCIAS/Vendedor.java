@@ -86,14 +86,14 @@ public class Vendedor{
      * Metodo que cambia el valor añosExperiencia
      * @param añosExperiencia Tiempo de experiencia del vendedor en su campo
      * */
-    public void setAñosExperiencia(double añosExperiencia){
+    public void setañosExperiencia(double añosExperiencia){
 	this.añosExperiencia = añosExperiencia;
     }
     /*
      * Metodo que regresa el valor añosExperiencia
      * @return añosExperiencia
      * */
-    public double getAñosExperiencia(){
+    public double getañosExperiencia(){
 	return añosExperiencia;
     }
     /*
