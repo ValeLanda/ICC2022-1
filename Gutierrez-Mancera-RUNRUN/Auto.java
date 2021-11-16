@@ -8,11 +8,11 @@ public class Auto{
   private String color;
   private int modelo;
   private String transmision;
-  private String nombre;
+  private String nombreA;
   private double precio;
   //Constructor con args
-  public Auto(String nombre,String color,int modelo, String transmision,double precio){
-    this.nombre=nombre;
+  public Auto(String nombreA,String color,int modelo, String transmision,double precio){
+    this.nombreA=nombreA;
     this.color=color;
     this.modelo=modelo;
     this.transmision=transmision;
@@ -24,8 +24,8 @@ public class Auto{
   *Metodo que devuelve el nombre el auto
   *@return El nombre del auto
   **/
-  public String getNombre(){
-    return this.nombre;
+  public String getNombreA(){
+    return this.nombreA;
   }
   /**
   *Metodo que devuelve el color del auto
@@ -59,8 +59,8 @@ public class Auto{
   public void setPrecio(double precio){
     this.precio=precio;
   }
-  public void setNombre(String nombre){
-    this.nombre=nombre;
+  public void setNombre(String nombreA){
+    this.nombreA=nombreA;
   }
   public void setColor(String color){
     this.color=color;
@@ -77,6 +77,6 @@ public class Auto{
   //Metodo toStriing
   
   public String toString(){
-    return "El auto "+nombre+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", y tiene un precio de "+precio+" pesos.";
+    return "El auto "+nombreA+", es de color "+color+", modelo "+modelo+", transmision tipo "+transmision+", y tiene un precio de "+precio+" pesos.";
     }
 }
