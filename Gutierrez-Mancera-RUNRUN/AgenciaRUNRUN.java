@@ -15,20 +15,25 @@ public class AgenciaRUNRUN{
       Comprador comprador = new Comprador(nombreU,10);
       comprador.setNombre(nombreU);
       System.out.println("Mucho gusto "+comprador.getNombre());
-    
-    
-    //Obtenemos datos del cliente
-    //Vendedor ofrece varios autos sin dar a conocer sus caracteristicas
-    //Cliente Selecciona un auto de su interes o ninguno
-    //Vendedor da todas las caracteristicas del auto seleccionado
-    //Cliente decide si comprarlo o no
-    //Vendedor realiza el cobro
-    //Cliente paga
-    //Auto vendido
-    //Despedida al Cliente
-    //Calificacion del cliente hacia la agencia.
-    
-    
       
+
+      //Vendedor ofrece varios autos sin dar a conocer sus caracteristicas
+      Auto auto1 = new Auto("Elantra","rojo",2022,"standar",350000.1);
+      System.out.println("Los autos disponibles en inventario son:"+auto1.getNombreA()+"....1");
+      System.out.println(comprador.getNombre() + " si te interesa alguno de estos autos, escribe a continuacion el numero correspondiente al auto de tu interes");
+      //Cliente Selecciona un auto de su interes o ninguno
+      int eleccion = sc.nextInt();
+      //Vendedor da todas las caracteristicas del auto seleccionado
+      if (eleccion == 1){
+	  System.out.println(auto1.toString());
+      }else{
+	  System.out.println("F");
+      }
+      //Cliente decide si comprarlo o no
+      //Vendedor realiza el cobro
+      //Cliente paga
+      //Auto vendido
+      //Despedida al Cliente
+      //Pedir calificacion al cliente sobre la agencia      
   }
 }
