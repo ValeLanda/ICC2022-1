@@ -22,7 +22,7 @@ public class Auto{
     private boolean disponibilidad;
 
     //El nombre del vendedor del auto
-    private String vendedor;
+    private Vendedor vendedor;
 
     //Constructores
 
@@ -146,15 +146,15 @@ public class Auto{
      * Metodo que devuelve el nombre del vendedor del auto
      * @return El nombre del vendedor del auto
      */
-    public String getVendedor(){
+    public Vendedor getVendedor(){
 	return this.vendedor;
     }
     /**
      * Metodo que modifica el nombre del vendedor actual del auto
      * @param nombre El nuevo nombre del nuevo vendedor
      */
-    public void setVendedor(String nombre){
-	this.vendedor = nombre;
+    public void setVendedor(Vendedor vendedor){
+	this.vendedor = vendedor;
     }
     /**
      * Metodo toString que muestra al objeto de la clase Auto en forma de String

@@ -16,9 +16,6 @@ public class Comprador{
     //La cantidad de autos que caben en el garaje del comprador
     private int cantidadDeAutos;
 
-    //El vendedor actual del comprador
-    private Vendedor vendedor;
-
     //Debí nombrar a esta variable "cantidadDeAutos", pero ya es muy tarde para pensar en ello
     private int autoActual;
 
@@ -49,9 +46,6 @@ public class Comprador{
 	this("Desconocido", dinero, 10);
     }
 
-
-
-    
     //Getters
 
     /**
@@ -77,15 +71,6 @@ public class Comprador{
     public int getCantidadGaraje(){
 	return this.cantidadDeAutos;
     }
-
-    /**
-     * Metodo que devuelve el vendedor actual del comprador
-     * @return El vendedor actual
-     */
-    public Vendedor getVendedor(){
-	return this.vendedor;
-    }
-
     
     //Setters
 
@@ -104,14 +89,7 @@ public class Comprador{
 	this.dinero = dinero;
     }
 
-    /**
-     * Metodo que cambia el vendedor actual
-     * @param vendedor El nuevo vendedor
-     */
-    public void setVendedor(Vendedor vendedor){
-	this.vendedor = vendedor;
-    }
-    
+   
     //Más métodos
 
     /**
@@ -122,7 +100,7 @@ public class Comprador{
 	if(this.autoActual < this.cantidadDeAutos){
 	    System.out.println("Auto que " + this.nombre + " quiere comprar: " + autoNuevo.getModelo());
 	    System.out.println("Precio del automovil: $" + autoNuevo.getPrecio());
-	    System.out.println("Vendido por: " + autoNuevo.getVendedor() + "\n ...");
+	    System.out.println("Vendido por: " + autoNuevo.getVendedor().getNombre() + "\n ...");
 	    System.out.println("Transacción en progreso...\n...");
 	
 	    if(this.getDinero() >= autoNuevo.getPrecio() && autoNuevo.getDisponibilidad()){
@@ -130,6 +108,8 @@ public class Comprador{
 		autoNuevo.setDisponibilidad(false);
 		autos[this.autoActual] = autoNuevo;
 		this.autoActual++;
+		autoNuevo.getVendedor().setSueldo(autoNuevo.getVendedor().getSueldo() + (autoNuevo.getPrecio()/250)); //Incrementa el sueldo del vendedor del auto
+		autoNuevo.getVendedor().setAutosVendidos(autoNuevo.getVendedor().getAutosVendidos()+1); //Aumenta por 1 el contador de autos vendidos por el vendedor del auto.			
 		System.out.println("Transaccion completada exitosamente!!! :)");
 	    }
 	    else{
@@ -153,7 +133,7 @@ public class Comprador{
 	    System.out.println("Auto: " +(i+1) +": \n"  + autos[i]);
 	    System.out.println("&&&&&&&&&&&&&&");
 	}
-;
+
     }
 
    

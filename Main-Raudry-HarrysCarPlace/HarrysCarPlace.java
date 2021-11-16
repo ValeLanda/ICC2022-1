@@ -1,22 +1,33 @@
 public class HarrysCarPlace{
     public static void main(String[] args){
 	
-	Auto autos[] = new Auto[4];
+	Auto autos[] = new Auto[6];
 	autos[0] = new Auto("DeLorean", "Plateado","1982", 200000);
 	autos[1] = new Auto("KITT", "Negro", "1982", 150000);
 	autos[2] = new Auto("Tsuru", "Arcoiris", "2001", 430000);
 	autos[3] = new Auto("Tractor de combate", "Violeta", "1969", 500000);
+	autos[4] = new Auto("HomeroMovil", "Verde", "1991", 190000);
+	autos[5] = new Auto();
 
-	Auto autosB[] = new Auto[5];
+	Auto autosB[] = new Auto[7];
 	autosB[0] = new Auto("Vocho", "Amarillo","1976", 200000);
 	autosB[1] = new Auto("Plymouth Fury", "Rojo", "1958", 150000);
-	autosB[2] = new Auto("Nosedecoches", "Azul", "1977", 430000);
-	autosB[3] = new Auto("fooo", "fefee", "2003", 500000);
-	autosB[4] = new Auto("faaa", "fiiii", "1985", 594594);
+	autosB[2] = new Auto("Tesla de Magna", "Azul", "1977", 430000);
+	autosB[3] = new Auto("Tsuru tuneado", "Azul menta", "2003", 500000);
+	autosB[4] = new Auto();
+	autosB[5] = new Auto("AutoCar", "Rojo", "2006", 14000);
+	autosB[6] = new Auto();
 
+
+	Auto autosC[] = new Auto[4];
+	autosC[0] = new Auto("4x4 Fisher Price", "Naranja", "1985", 594594);
+	autosC[1] = new Auto("Triciclo Apache", "Amarillo", "2003", 12000);
+	autosC[2] = new Auto("Patines de los polinesios", "Rosa", "2020", 5000);
+	autosC[3] = new Auto("Hotwheels Batman", "Azul", "2007", 10000);
 	
 	Vendedor v1 = new Vendedor("Pedrito", autos);
 	Vendedor v2 = new Vendedor("Martina", autosB);
+	Vendedor v3 = new Vendedor("Raymundo", autosC);
 
 	v1.setNombre("Angel");
 	
@@ -73,8 +84,6 @@ public class HarrysCarPlace{
 	
 	c2.mostrarAutosEnPosesion();
 
-
-
 	System.out.println("\n\n");
 	System.out.println("///////////");
 	System.out.println("Tercer comprador: : ");
@@ -86,25 +95,17 @@ public class HarrysCarPlace{
 	c3.comprarAuto(autosB[4]);
 	System.out.println("\n\nDinero actual de " + c3.getNombre() + ": $" + c3.getDinero());
 	
-	
 	System.out.print("\n");
 	
 	c3.mostrarAutosEnPosesion();
 
+	System.out.println("\n=====Rendimiento de los vendedores:=====\n");
+	System.out.println(v1.toString());
+	System.out.println(v2.toString());
+	System.out.println(v3.toString());
 	
-	
-	
-	
-
-
-
-
-
-
-	
-
-	
-
+	System.out.println("\n#################\n"+"Empleado del mes: " + v1.empleadoDelMes(v1, v2, v3) + "\n#################\n");
+	System.out.println("\n#################\n"+"Empleado a despedir este mes: " + v1.proximoDespido(v1, v2, v3) + "\n#################\n");
 
     }
 }
