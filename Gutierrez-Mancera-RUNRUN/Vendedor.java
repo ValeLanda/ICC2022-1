@@ -1,8 +1,3 @@
-/**
-*Clase que representa a un vendador de la agencia RUNRUN
-*@author Gil Axel Gutierrez Lara
-*@version 1.0
-**/
 public class Vendedor{
 
   //Atributos
