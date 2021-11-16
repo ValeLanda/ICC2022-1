@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@Version 1.1
+*@Version 1.2
 */
 /**
 *Clase Auto
@@ -9,7 +9,7 @@
 public class Auto {
     private String marca;
     private String modelo;
-    private int año;
+    private int anio;
     private String color;
     /**Metodo constructor que genera un automovil con los datos proporcionados por el usuario
     *@since 1.0
@@ -18,10 +18,42 @@ public class Auto {
     *@param año               Tipo de dato int que especifica el año en que se produjo el automovil
     *@param color             Tipo de datos String que especifica el color del automovil
     */
-    public Auto(String marca, String modelo, int año, String color){
+    public Auto(String marca, String modelo, int anio, String color){
       this.marca = marca;
       this.modelo = modelo;
-      this.año = año;
+      this.anio = anio;
+      this.color = color;
+    }
+
+    /**Cambia la marca del automovil por la marca en tipo de dato String que recibe el metodo
+    *@since 1.2
+    *@param marca    Tipo de dato String por la cual se remplazara la marca del automovil
+    */
+    public void setMarca(String marca){
+      this.marca = marca;
+    }
+
+    /**Cambia el modelo del automovil por el modelo del tipo de dato String que recibe el metodo
+    *@since 1.2
+    *@param modelo    Tipo de dato String por el cual se remplazara el modelo del automovil
+    */
+    public void setModelo(String modelo){
+      this.modelo = modelo;
+    }
+
+    /**Cambia el año del automovil por la año en tipo de dato int que recibe el metodo
+    *@since 1.2
+    *@param int    Tipo de dato int por la cual se remplazara el año del automovil
+    */
+    public void setAnio(int anio){
+      this.anio = anio;
+    }
+
+    /**Cambia el color del automovil por el color del tipo de dato String que recibe el metodo
+    *@since 1.2
+    *@param color    Tipo de dato String por el cual se remplazara el color del automovil
+    */
+    public void setColor(String color){
       this.color = color;
     }
 
@@ -42,11 +74,11 @@ public class Auto {
     }
 
     /**Metodo que regresa año de inicio de produccion del automovil en un dato tipo int
-    *@since Version 1.1
+    *@since 1.1
     *@return Valor en tipo de dato int referente al año de inicio de produccion del automovil
     */
-    public int getAño(){
-      return año;
+    public int getAnio(){
+      return anio;
     }
 
     /**Metodo que regresa el color del automovil en tipo de dato String
@@ -62,6 +94,6 @@ public class Auto {
     *@return Tipo de dato String que resume la informacion clave del automovil
     */
     public String toString(){
-      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAño()) + "\ncolor: " + getColor() + ".";
+      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio()) + "\ncolor: " + getColor() + ".";
     }
 }

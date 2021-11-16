@@ -1,0 +1,270 @@
+/**
+*@author Juan Luis Rivera Ibarra
+*@version 1.0
+*/
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+*Clase Agencia
+*Programa que simula la operacion y administracion de una agencia de autos
+*@since 1.0
+*/
+public class Agencia{
+  /**
+  *Metodo main, el cual es forzoso y lleva  acabo la ejecucion del programa
+  */
+  public static void main(String[] args){
+    //Crea el arreglo de objetos de la clase Auto
+    ArrayList<Auto> autos = new ArrayList<>();
+
+    //Crea el arreglo de objetos de la clase Vendedor
+    //ArrayList<Vendedor> vendedores = new ArrayList<>();
+
+    //Crea el arreglo de objetos de la clase Comprador
+    //ArrayList<Comprador> compradores = new ArrayList<>();
+
+    //Se crea
+    Scanner input = new Scanner(System.in);
+
+    int menu0 = -1;
+
+    System.out.println("Escoge una opcion numerica del 0 al 4 para elegir la lista sobre la cual añadir/modificar/eliminar/buscar informacion: \n");
+    System.out.println("Compradores (1): \n");
+    System.out.println("Vendedores (2): \n");
+    System.out.println("Automoviles (3): \n");
+    System.out.println("Terminar programa (4): \n");
+    System.out.println("Volver a mostrar este menu (0): \n");
+
+    do {
+      if (menu0 != -1) {
+        System.out.println("\nEscoge una opcion numerica del 0 al 4 para elegir la lista sobre la cual añadir/modificar/eliminar/buscar/imprimir informacion: \n");
+      }
+      menu0 = input.nextInt();
+
+      //Se selecciono trabajar en la lista de Compradores
+      if (menu0 == 1){
+
+        System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Compradores: \n");
+        System.out.println("Añadir (1): \n");
+        System.out.println("Modificar (2): \n");
+        System.out.println("Eliminar (3): \n");
+        System.out.println("Buscar (4): \n");
+        System.out.println("Imprimir lista (5): \n");
+        System.out.println("Regresar al menu principal (6): \n");
+        System.out.println("Volver a mostrar este menu (0): \n");
+
+        int op = -1;
+
+        do {
+          if (op != -1) {
+            System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Compradores: \n");
+          }
+
+          op = input.nextInt();
+
+          //Añadir
+          if (op == 1) {
+            /*System.out.println(": \n");
+            compradores.add(new )*/
+          }
+
+          //Modificar
+          if (op == 2) {
+
+          }
+
+          //Eliminar
+          if (op == 3) {
+
+          }
+
+          //Buscar
+          if (op == 4) {
+
+          }
+
+          //Imprimir
+          /*if (op == 5) {
+            for (Auto comprador: compradores) {
+                System.out.println(comprador);
+                System.out.println("\n");
+            }
+          }*/
+
+          //Menu
+          if (op == 0) {
+            System.out.println("Escoge una opcion numerica del 0 al 5 para realizar alguna operacion sobre la lista de Compradores: \n");
+            System.out.println("Añadir (1): \n");
+            System.out.println("Modificar (2): \n");
+            System.out.println("Eliminar (3): \n");
+            System.out.println("Buscar (4): \n");
+            System.out.println("Regresar al menu principal (5): \n");
+            System.out.println("Volver a mostrar este menu (0): \n");
+          }
+
+        } while (op != 6);
+
+      }
+
+      //Se selecciono trabajar en la lista de Vendedores
+      if (menu0 == 2) {
+
+        System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Vendedores: \n");
+        System.out.println("Añadir (1): \n");
+        System.out.println("Modificar (2): \n");
+        System.out.println("Eliminar (3): \n");
+        System.out.println("Buscar (4): \n");
+        System.out.println("Imprimir lista (5): \n");
+        System.out.println("Regresar al menu principal (6): \n");
+        System.out.println("Volver a mostrar este menu (0): \n");
+
+        int op = -1;
+
+        do {
+          if (op != -1) {
+            System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Vendedores: \n");
+          }
+
+          op = input.nextInt();
+
+          //Añadir
+          if (op == 1) {
+
+          }
+
+          //Modificar
+          if (op == 2) {
+
+          }
+
+          //Eliminar
+          if (op == 3) {
+
+          }
+
+          //Buscar
+          if (op == 4) {
+
+          }
+
+          //Imprimir
+          if (op == 5) {
+            /*for (Auto vendedor: vendedores) {
+                System.out.println(vendedor);
+                System.out.println("\n");
+            }*/
+          }
+
+          //Menu
+          if (op == 0) {
+            System.out.println("Escoge una opcion numerica del 0 al 4 para realizar alguna operacion sobre la lista de Vendedores: \n");
+            System.out.println("Añadir (1): \n");
+            System.out.println("Modificar (2): \n");
+            System.out.println("Eliminar (3): \n");
+            System.out.println("Buscar (4): \n");
+            System.out.println("Regresar al menu principal (5): \n");
+            System.out.println("Volver a mostrar este menu (0): \n");
+          }
+
+        } while (op != 6);
+
+      }
+
+      //Se selecciono trabajar en la lista de Automoviles
+      if (menu0 == 3) {
+
+        System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Automoviles: \n");
+        System.out.println("Añadir (1): \n");
+        System.out.println("Modificar (2): \n");
+        System.out.println("Eliminar (3): \n");
+        System.out.println("Buscar (4): \n");
+        System.out.println("Imprimir lista (5): \n");
+        System.out.println("Regresar al menu principal (6): \n");
+        System.out.println("Volver a mostrar este menu (0): \n");
+
+        int op = -1;
+
+        do {
+          if (op != -1) {
+            System.out.println("\nEscoge una opcion numerica del 0 al 6 para realizar alguna operacion sobre la lista de Automoviles: \n");
+          }
+
+          op = input.nextInt();
+          //Limpia el buffer (necesario hacer despues de cambiar el tipo de dato que recibe el scanner)
+          input.nextLine();
+
+          //Añadir
+          if (op == 1) {
+            System.out.println("\nIngresa la marca del automovil: \n");
+            String marca = input.nextLine();
+            System.out.println("\nIngresa el modelo del automovil: \n");
+            String modelo = input.nextLine();
+            System.out.println("\nIngresa el año del automovil: \n");
+            int anio = input.nextInt();
+            input.nextLine();
+            System.out.println("\nIngresa el color del automovil: \n");
+            String color = input.nextLine();
+
+            //Crea y agrega el nuevo objeto auto a la lista
+            autos.add(new Auto(marca, modelo, anio, color));
+          }
+
+          //Modificar
+          if (op == 2) {
+
+          }
+
+          //Eliminar
+          if (op == 3) {
+
+          }
+
+          //Buscar
+          if (op == 4) {
+
+          }
+
+          //Imprimir
+          if (op == 5) {
+            for (Auto auto: autos) {
+                System.out.println(auto);
+                System.out.println("\n");
+            }
+          }
+
+          //Menu
+          if (op == 0) {
+            System.out.println("Escoge una opcion numerica del 0 al 5 para realizar alguna operacion sobre la lista de Automoviles: \n");
+            System.out.println("Añadir (1): \n");
+            System.out.println("Modificar (2): \n");
+            System.out.println("Eliminar (3): \n");
+            System.out.println("Buscar (4): \n");
+            System.out.println("Regresar al menu principal (5): \n");
+            System.out.println("Volver a mostrar este menu (0): \n");
+          }
+
+        } while (op != 6);
+
+      }
+
+      //Se selecciona reimprimir el menu principal
+      if (menu0 == 0) {
+        System.out.println("Escoge una opcion numerica del 0 al 4 para elegir la lista sobre la cual añadir/modificar/eliminar informacion: \n");
+        System.out.println("Compradores (1): \n");
+        System.out.println("vendedores (2): \n");
+        System.out.println("Automoviles (3): \n");
+        System.out.println("Terminar programa (4): \n");
+        System.out.println("Volver a mostrar el menu (0): \n");
+      }
+
+      //Se ingreso un valor de menu invalido
+      if (menu0 > 4 || menu0 < 0) {
+        System.out.println("La opcion ingresada es invalida, ingrese un valor numerico valido/n");
+      }
+
+    } while (menu0 != 4);
+
+    input.close();
+  }
+}
