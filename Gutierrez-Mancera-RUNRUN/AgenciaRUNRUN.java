@@ -60,6 +60,14 @@ public class AgenciaRUNRUN{
       //Cliente paga
       //Auto vendido
       //Despedida al Cliente
-      //Pedir calificacion al cliente sobre la agencia      
+      System.out.println("");
+      System.out.println("Estimado(a) " + comprador.getNombre() + " fue un placer haberlo recibido, gracias por habernos elegido.");
+      //Pedir calificacion al cliente sobre la agencia
+      System.out.println("");
+      System.out.println("Por último, le pediremos que califique nuestro servicio:");      
+      System.out.println("Calificación del cliente: " + comprador.getCalificacion());    
+      System.out.println("");
+      System.out.println("Gracias por su calificación, asi podremos satisfacer mejor sus necesidades.");
+      System.out.println("¡Que tenga un excelente dia!");
   }
 }
