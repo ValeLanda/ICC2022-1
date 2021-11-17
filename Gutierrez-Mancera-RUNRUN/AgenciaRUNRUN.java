@@ -85,6 +85,6 @@ public class AgenciaRUNRUN{
       System.out.println("No. de celular = " + v1.getNumeroCel());
       System.out.println("Correo electrónico = " + v1.getCorreo());
       System.out.println(" ");
-      System.out.println("------¡Que tenga un excelente dia!------");
+      System.out.println("-------¡Que tenga un excelente dia!-------");
   }
 }
