@@ -1,3 +1,4 @@
+
 /**
  * Clase Agencia que funje como main para poner en uso la clase Auto, Vendedor y Cliente, simulando un 
  * programa de una agencia de coches.
@@ -14,7 +15,6 @@ public class Agencia{
 	//este Scanner es para pausar los datos en pantalla, ya que si no, la informacion se imprime y se borra en corto
 	Scanner p = new Scanner(System.in);
  	int opcion;
-
 	do{
 	    //Agregamos codio ANSI para simular limpieza de pantalla
 	    System.out.print("\033[H\033[2J");
