@@ -12,9 +12,10 @@ public class Auto {
     private int anio;
     private String color;
     private double precio;
+
     /**Metodo constructor que genera un automovil con los datos proporcionados por el usuario
     *@since 1.0
-    *@param modelo            Tipo de datos String que especifica la marca que producel el automovil
+    *@param marca             Tipo de datos String que especifica la marca que producel el automovil
     *@param modelo            Tipo de datos String que especifica el Modelo del automovil
     *@param año               Tipo de dato int que especifica el año en que se produjo el automovil
     *@param color             Tipo de datos String que especifica el color del automovil
@@ -113,6 +114,6 @@ public class Auto {
     *@return Tipo de dato String que resume la informacion clave del automovil
     */
     public String toString(){
-      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio()) + "\ncolor: " + getColor() + "\nprecio: $" + getPrecio() + ".";
+      return "Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio() + "\ncolor: " + getColor() + "\nprecio: $" + getPrecio() + ".";
     }
 }

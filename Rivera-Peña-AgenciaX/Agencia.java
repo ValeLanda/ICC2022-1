@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@version 1.0
+*@version 1.2
 */
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,7 +19,7 @@ public class Agencia{
     ArrayList<Auto> autos = new ArrayList<>();
 
     //Crea el arreglo de objetos de la clase Vendedor
-    //ArrayList<Vendedor> vendedores = new ArrayList<>();
+    ArrayList<Vendedor> vendedores = new ArrayList<>();
 
     //Crea el arreglo de objetos de la clase Comprador
     //ArrayList<Comprador> compradores = new ArrayList<>();
@@ -85,12 +85,14 @@ public class Agencia{
           }
 
           //Imprimir
-          /*if (op == 5) {
-            for (Auto comprador: compradores) {
+          if (op == 5) {
+            /*
+            System.out.println("\n\n");
+            for (Comprador comprador: compradores) {
                 System.out.println(comprador);
                 System.out.println("\n");
-            }
-          }*/
+            }*/
+          }
 
           //Menu
           if (op == 0) {
@@ -127,33 +129,105 @@ public class Agencia{
           }
 
           op = input.nextInt();
+          input.nextLine();
 
           //Añadir
           if (op == 1) {
+            System.out.println("\nIngresa el nombre del vendedor: \n");
+            String nombre = input.nextLine();
+            System.out.println("\nIngresa el horario de entrada: \n");
+            int entrada = input.nextInt();
+            System.out.println("\nIngresa el horario de salida: \n");
+            int salida = input.nextInt();
+            input.nextLine();
+            System.out.println("\nIngresa el salario: \n");
+            double salario = input.nextDouble();
 
+            //Crea y agrega el nuevo objeto auto a la lista
+            vendedores.add(new Vendedor(nombre, entrada, salida, salario));
           }
 
           //Modificar
           if (op == 2) {
+            System.out.println("\nIngresa el numero referente a la posicion del vendedor a modificar en la lista de vendedores: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el nombre del vendedor: \n");
+            String nombre = input.nextLine();
+
+            System.out.println("\nIngresa el horario de entrada: \n");
+            int entrada = input.nextInt();
+
+            System.out.println("\nIngresa el horario de salida: \n");
+            int salida = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el salario: \n");
+            double salario = input.nextDouble();
+
+            vendedores.set(lugar, new Vendedor(nombre, entrada, salida, salario));
           }
 
           //Eliminar
           if (op == 3) {
+            System.out.println("\nIngresa el numero referente a la posicion del vendedor a modificar en la lista de vendedores: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            vendedores.remove(lugar);
           }
 
           //Buscar
           if (op == 4) {
+            System.out.println("\nIngresa el nombre del vendedor: \n");
+            String nombre = input.nextLine();
+
+            System.out.println("\nIngresa el horario de entrada: \n");
+            int entrada = input.nextInt();
+
+            System.out.println("\nIngresa el horario de salida: \n");
+            int salida = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el salario: \n");
+            double salario = input.nextDouble();
+
+            System.out.println("\n\n");
+
+            Vendedor vendedoraux = new Vendedor(nombre, entrada, salida, salario);
+            boolean estaenlista = false;
+            int i = 0;
+            int cont = 0;
+
+            for (Vendedor vendedor: vendedores) {
+              if (vendedor.toString().equals(vendedoraux.toString())) {
+                i = vendedores.indexOf(vendedor);
+                cont ++;
+                estaenlista = true;
+                if (cont >= 1) {
+                  System.out.println("\nLa conincidencia numero: " + cont + " se encuentra en la posicion: " + i + " de la lista de vendedores.\n");
+                }
+              }
+            }
+            if (estaenlista) {
+
+            }
+            else {
+              System.out.println("\nEl vendedor no se encuentra en la lista de vendedores.\n");
+            }
 
           }
 
           //Imprimir
           if (op == 5) {
-            /*for (Auto vendedor: vendedores) {
+            System.out.println("\n\n");
+            for (Vendedor vendedor: vendedores) {
                 System.out.println(vendedor);
                 System.out.println("\n");
-            }*/
+            }
           }
 
           //Menu
@@ -198,13 +272,18 @@ public class Agencia{
           if (op == 1) {
             System.out.println("\nIngresa la marca del automovil: \n");
             String marca = input.nextLine();
+
             System.out.println("\nIngresa el modelo del automovil: \n");
             String modelo = input.nextLine();
+
             System.out.println("\nIngresa el año del automovil: \n");
             int anio = input.nextInt();
             input.nextLine();
+
             System.out.println("\nIngresa el color del automovil: \n");
             String color = input.nextLine();
+
+            System.out.println("\n\n");
 
             //Crea y agrega el nuevo objeto auto a la lista
             autos.add(new Auto(marca, modelo, anio, color));
@@ -212,21 +291,81 @@ public class Agencia{
 
           //Modificar
           if (op == 2) {
+            System.out.println("\nIngresa el numero referente a la posicion del automovil a modificar en la lista de automoviles: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa la marca del automovil: \n");
+            String marca = input.nextLine();
+
+            System.out.println("\nIngresa el modelo del automovil: \n");
+            String modelo = input.nextLine();
+
+            System.out.println("\nIngresa el año del automovil: \n");
+            int anio = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el color del automovil: \n");
+            String color = input.nextLine();
+
+            autos.set(lugar, new Auto(marca, modelo, anio, color));
           }
 
           //Eliminar
           if (op == 3) {
+            System.out.println("\nIngresa el numero referente a la posicion del automovil en la lista de automoviles: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            autos.remove(lugar);
           }
 
           //Buscar
           if (op == 4) {
 
+            System.out.println("\nIngresa la marca del automovil: \n");
+            String marca = input.nextLine();
+
+            System.out.println("\nIngresa el modelo del automovil: \n");
+            String modelo = input.nextLine();
+
+            System.out.println("\nIngresa el año del automovil: \n");
+            int anio = input.nextInt();
+            input.nextLine();
+            System.out.println("\nIngresa el color del automovil: \n");
+            String color = input.nextLine();
+
+            System.out.println("\n\n");
+
+            Auto autoaux = new Auto(marca, modelo, anio, color);
+            boolean estaenlista = false;
+            int i = 0;
+            int cont = 0;
+
+            for (Auto auto: autos) {
+              if (auto.toString().equals(autoaux.toString())) {
+                i = autos.indexOf(auto);
+                cont ++;
+                estaenlista = true;
+                if (cont >= 1) {
+                  System.out.println("\nLa conincidencia numero: " + cont + " se encuentra en la posicion: " + i + " de la lista de automoviles.\n");
+                }
+              }
+            }
+            if (estaenlista) {
+
+            }
+            else {
+              System.out.println("\nEl automovil no se encuentra en la lista de automoviles.\n");
+            }
+
           }
 
           //Imprimir
           if (op == 5) {
+            System.out.println("\n\n");
             for (Auto auto: autos) {
                 System.out.println(auto);
                 System.out.println("\n");
@@ -250,7 +389,7 @@ public class Agencia{
 
       //Se selecciona reimprimir el menu principal
       if (menu0 == 0) {
-        System.out.println("Escoge una opcion numerica del 0 al 4 para elegir la lista sobre la cual añadir/modificar/eliminar informacion: \n");
+        System.out.println("Escoge una opcion numerica del 0 al 4 para elegir la lista sobre la cual añadir/modificar/eliminar/buscar informacion: \n");
         System.out.println("Compradores (1): \n");
         System.out.println("vendedores (2): \n");
         System.out.println("Automoviles (3): \n");
