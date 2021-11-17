@@ -23,6 +23,11 @@ public class Auto{
     //El precio del auto
     private String precio;
 
+
+    //El domicilio a donde llegará el auto
+    private String domicilio;
+
+
     //CONSTRUCTORES
 
     /**
@@ -57,6 +62,21 @@ public class Auto{
 	this.precio = "229,200";
 	
     }
+
+    /**
+
+     * Constructor que recibe el color del auto y el domicilio de la persona a donde estará llegando
+     * @param color El color del auto
+     * @param domicilio Calle y número a donde llegará el auto
+     */
+     public Auto(String color, String domicilio){
+         this.modelo = "Chevrolet Aveo";
+         this.color = color;
+         this.noPuertas = "4";
+         this.año = "2022";
+         this.electrico = false;
+         this.precio = "229,200";
+     }
 
     /**
      * Constructor sin parametros-- representa a un Chevrolet Groove 2022
