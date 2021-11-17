@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@Version 1.2
+*@Version 1.3
 */
 /**
 *Clase Auto
@@ -11,9 +11,10 @@ public class Auto {
     private String modelo;
     private int anio;
     private String color;
+
     /**Metodo constructor que genera un automovil con los datos proporcionados por el usuario
     *@since 1.0
-    *@param modelo            Tipo de datos String que especifica la marca que producel el automovil
+    *@param marca             Tipo de datos String que especifica la marca que producel el automovil
     *@param modelo            Tipo de datos String que especifica el Modelo del automovil
     *@param año               Tipo de dato int que especifica el año en que se produjo el automovil
     *@param color             Tipo de datos String que especifica el color del automovil
@@ -94,6 +95,6 @@ public class Auto {
     *@return Tipo de dato String que resume la informacion clave del automovil
     */
     public String toString(){
-      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio()) + "\ncolor: " + getColor() + ".";
+      return "Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio() + "\ncolor: " + getColor() + ".";
     }
 }
