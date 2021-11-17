@@ -26,6 +26,17 @@ public class Cliente{
 	this.dineroDisponible = dineroDisponible;
     }
 
+    /**
+     * Constructor que recibe el nombre del cliente para asociarlo con su dinero disponible de 
+     * 1,000,000.
+     * @param nombreCliente
+     * @param dineroDisponible
+     */
+    public Cliente(String nombre){
+        this.nombre = nombre;
+        this.dineroDisponible = 1000000;
+    }
+
 
     //METODOS
 

@@ -19,7 +19,17 @@ public class Agencia{
 	    //Agregamos codio ANSI para simular limpieza de pantalla
 	    System.out.print("\033[H\033[2J");
 	    System.out.println("****BIENVENIDO A LA AGENCIA LOS CHICOS QUE LLORAN****" + "\n");
-	    System.out.println("¿Que podemos hacer por ti?"+ "\n" + "1. Comprar auto" + "\n" + "2. Quejas sobre algun vendedor" + "\n" + "3. Comprar auto para entregar como regalo" + "\n" + "4.Salir");
+	    System.out.println("¿Cual es su nombre? ");
+	    System.out.print("Ingrese su nombre (ejemplo: Ethan): ");
+
+		Scanner sc7 = new Scanner(System.in);
+	    String nombreCliente = sc7.nextLine();
+
+	    Cliente cliente = new Cliente(nombreCliente);
+		
+		
+		
+		System.out.println("¿Que podemos hacer por ti "+nombreCliente + "?" + "\n" + "1. Comprar auto" + "\n" + "2. Quejas sobre algun vendedor" + "\n" + "3. Comprar auto para entregar como regalo" + "\n" + "4.Salir");
 	    System.out.print("Elija una opcion: ");
 
 	    opcion = sc.nextInt();
@@ -66,6 +76,9 @@ public class Agencia{
 			    //Se crea un ejemplar de la clase con el constructor que recibe solo el color del auto
 			    Auto autoAveo = new Auto("Rojo");
 			    System.out.println("Usted ha realizado la compra de:\n" + autoAveo);
+				int cobro = cliente.dineroDisponible() - 229200; 
+			    System.out.println("Usted dispone de: $"+ cobro);
+
 
 			    //Si la opcion ingresada es 2 entra al else if
 			}else if(opcion == 2){
@@ -73,6 +86,7 @@ public class Agencia{
 			    //Se crea un ejemplar de la clase con el constructor que recibe solo el color del auto
 			    Auto autoAveo = new Auto("Blanco");
 			    System.out.println("Usted ha realizado la compra de:\n" + autoAveo);
+				System.out.println("Usted dispone de: $"+ (cliente.dineroDisponible() - 229200));
 
 			    //Si el usuario ingresa otro valor, muestra el siguiente mensaje
 			}else{
@@ -94,7 +108,9 @@ public class Agencia{
 		    //Se crea un ejemplar de la clase con el constructor sin parametros
 		    Auto autoGroove = new Auto();
 		    System.out.println("Usted ha realizado la compra de: \n" + autoGroove);
-		    System.out.println("---------------------------------------------");
+		     System.out.println("Usted dispone de: $"+ (cliente.dineroDisponible() - 332900) );
+
+			System.out.println("---------------------------------------------");
 
 		    //El mensaje aparece y los datos en pantalla se quedan inmoviles hasta que el usuario teclee enter
 		    System.out.print("Presione enter para continuar...");
@@ -120,6 +136,7 @@ public class Agencia{
 			//Se crea un ejemplar de la clase con el constructor que recibe si es electrico y el precio del auto 
 			Auto autoBolt = new Auto(true, "930,900");
 			System.out.println("Usted ha realizado la compra de:\n" + autoBolt);
+			System.out.println("Usted dispone de: $"+ (cliente.dineroDisponible() - 930900) );
 
 			//Si la opcion ingresada es 2 entra al else if 
 		    }else if(opcion == 2){
@@ -127,6 +144,7 @@ public class Agencia{
 			//Se crea un ejemplar de la clase con el constructor que recibe si es electrico y el precio del auto
 			Auto autoBolt = new Auto(false, "620,000");
 			System.out.println("Usted ha realizado la compra de:\n" + autoBolt);
+			System.out.println("Usted dispone de: $"+ (cliente.dineroDisponible() - 620000) );
 
 			//Si la opcion ingresada no es 1 o 2 entra al else y muestra un mensaje al usuario
 		    }else{
@@ -286,7 +304,7 @@ public class Agencia{
 			    String domicilio = sc6.nextLine();
 				System.out.println("---------------------------------------------");
 				Auto autoAveoregaloB = new Auto("Blanco", domicilio);
-			    System.out.println("Usted ha realizado la compra de: " + autoAveoregaloB + " le estará llegando en su domicilio en un aproximado de 10 días");
+			    System.out.println("Usted ha realizado la compra de: " + autoAveoregaloB + " le estará llegando en su domicilio" + domicilio +  " en un aproximado de 10 días");
 
 			    //Si la opcion ingresada es 2 entra al else if
 			}else if(opcion == 2){
