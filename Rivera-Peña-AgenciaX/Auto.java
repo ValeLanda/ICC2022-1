@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@Version 1.2
+*@Version 1.3
 */
 /**
 *Clase Auto
@@ -11,18 +11,21 @@ public class Auto {
     private String modelo;
     private int anio;
     private String color;
+    private double precio;
     /**Metodo constructor que genera un automovil con los datos proporcionados por el usuario
     *@since 1.0
     *@param modelo            Tipo de datos String que especifica la marca que producel el automovil
     *@param modelo            Tipo de datos String que especifica el Modelo del automovil
     *@param año               Tipo de dato int que especifica el año en que se produjo el automovil
     *@param color             Tipo de datos String que especifica el color del automovil
+    *@param precio            Tipo de dato double que especifica el precio del automovil
     */
-    public Auto(String marca, String modelo, int anio, String color){
+    public Auto(String marca, String modelo, int anio, String color, double precio){
       this.marca = marca;
       this.modelo = modelo;
       this.anio = anio;
       this.color = color;
+      this.precio = precio;
     }
 
     /**Cambia la marca del automovil por la marca en tipo de dato String que recibe el metodo
@@ -57,6 +60,14 @@ public class Auto {
       this.color = color;
     }
 
+    /**Cambia el precio del automovil por el precio en tipo de dato double que recibe el metodo
+    *@since 1.3
+    *@param precio    Tipo de dato double por la cual se remplazara el precio del automovil
+    */
+    public void setPrecio(double precio){
+      this.precio = precio;
+    }
+
     /**Metodo que regresa la marca del automovil en un tipo de dato String
     *@since 1.1
     *@return Valor en tipo de dato String referente a la marca del automovil
@@ -89,11 +100,19 @@ public class Auto {
       return color;
     }
 
+    /**Metodo que regresa el precio del automovil en tipo de dato double
+    *@since 1.3
+    *@return Valor en tipo de dato double referente al precio del automovil
+    */
+    public double getPrecio(){
+      return precio;
+    }
+
     /**Metodo que regresa la infomacion clave del automovil en tipo de dato String
     *@since 1.1
     *@return Tipo de dato String que resume la informacion clave del automovil
     */
     public String toString(){
-      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio()) + "\ncolor: " + getColor() + ".";
+      return ("Automovil marca: " + getMarca() + "\nmodelo: " + getModelo() + "\nAño: " + getAnio()) + "\ncolor: " + getColor() + "\nprecio: $" + getPrecio() + ".";
     }
 }
