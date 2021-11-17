@@ -1,6 +1,6 @@
 /**
 *Clase que representa a un auto
-*@author Gil Axel Gutierrez Lara
+*@author Gil Axel Gutierrez Lara/Javier Alejandro Mancera Quiroz
 *@version 1.0
 **/
 public class Auto{
