@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@version 1.1
+*@version 1.2
 */
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -149,16 +149,75 @@ public class Agencia{
 
           //Modificar
           if (op == 2) {
+            System.out.println("\nIngresa el numero referente a la posicion del vendedor a modificar en la lista de vendedores: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el nombre del vendedor: \n");
+            String nombre = input.nextLine();
+
+            System.out.println("\nIngresa el horario de entrada: \n");
+            int entrada = input.nextInt();
+
+            System.out.println("\nIngresa el horario de salida: \n");
+            int salida = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el salario: \n");
+            double salario = input.nextDouble();
+
+            vendedores.set(lugar, new Vendedor(nombre, entrada, salida, salario));
           }
 
           //Eliminar
           if (op == 3) {
+            System.out.println("\nIngresa el numero referente a la posicion del vendedor a modificar en la lista de vendedores: \n");
 
+            int lugar = input.nextInt();
+            input.nextLine();
+
+            vendedores.remove(lugar);
           }
 
           //Buscar
           if (op == 4) {
+            System.out.println("\nIngresa el nombre del vendedor: \n");
+            String nombre = input.nextLine();
+
+            System.out.println("\nIngresa el horario de entrada: \n");
+            int entrada = input.nextInt();
+
+            System.out.println("\nIngresa el horario de salida: \n");
+            int salida = input.nextInt();
+            input.nextLine();
+
+            System.out.println("\nIngresa el salario: \n");
+            double salario = input.nextDouble();
+
+            System.out.println("\n\n");
+
+            Vendedor vendedoraux = new Vendedor(nombre, entrada, salida, salario);
+            boolean estaenlista = false;
+            int i = 0;
+            int cont = 0;
+
+            for (Vendedor vendedor: vendedores) {
+              if (vendedor.toString().equals(vendedoraux.toString())) {
+                i = vendedores.indexOf(vendedor);
+                cont ++;
+                estaenlista = true;
+                if (cont >= 1) {
+                  System.out.println("\nLa conincidencia numero: " + cont + " se encuentra en la posicion: " + i + " de la lista de vendedores.\n");
+                }
+              }
+            }
+            if (estaenlista) {
+
+            }
+            else {
+              System.out.println("\nEl vendedor no se encuentra en la lista de vendedores.\n");
+            }
 
           }
 
