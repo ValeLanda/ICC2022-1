@@ -1,6 +1,6 @@
 /**
 *@author Juan Luis Rivera Ibarra
-*@Version 1.3
+*@Version 1.4
 */
 /**
 *Clase Auto
@@ -62,7 +62,7 @@ public class Auto {
     }
 
     /**Cambia el precio del automovil por el precio en tipo de dato double que recibe el metodo
-    *@since 1.3
+    *@since 1.4
     *@param precio    Tipo de dato double por la cual se remplazara el precio del automovil
     */
     public void setPrecio(double precio){
@@ -102,7 +102,7 @@ public class Auto {
     }
 
     /**Metodo que regresa el precio del automovil en tipo de dato double
-    *@since 1.3
+    *@since 1.4
     *@return Valor en tipo de dato double referente al precio del automovil
     */
     public double getPrecio(){
