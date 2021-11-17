@@ -23,8 +23,10 @@ public class Auto{
     //El precio del auto
     private String precio;
 
+
     //El domicilio a donde llegará el auto
     private String domicilio;
+
 
     //CONSTRUCTORES
 
@@ -62,6 +64,7 @@ public class Auto{
     }
 
     /**
+
      * Constructor que recibe el color del auto y el domicilio de la persona a donde estará llegando
      * @param color El color del auto
      * @param domicilio Calle y número a donde llegará el auto
