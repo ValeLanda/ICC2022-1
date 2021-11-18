@@ -77,7 +77,7 @@ public class Comprador{
 	    auto += "\n\n" + autos[i];
 	    }
 	}
-	return "Nombre: " + nombre + "\nDinero: $" + dinero + "\nAutos adquiridos:" + auto;
+	return "Nombre: " + nombre + "\nDinero: $" + dinero + "\nAutos adquiridos:" + auto + "\n------------------";
     }
     
     /**
