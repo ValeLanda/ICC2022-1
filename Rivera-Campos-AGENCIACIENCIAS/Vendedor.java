@@ -9,7 +9,7 @@ public class Vendedor{
     private String meses;
     private double interes;
     private double enganche;
-    private double añosExperiencia;
+   
     
     /*
      * Metodo constructor que nos indica: nombre, meses, interes, enganche, añosExperiencia
@@ -19,12 +19,12 @@ public class Vendedor{
      * @param enganche enganche
      * @param añosExperiencia añosExperiencia
      * */
-    public Vendedor(String nombre, String meses, double interes, double enganche, double añosExperiencia){
+    public Vendedor(String nombre, String meses, double interes, double enganche){
 	this.nombre = nombre;
 	this.meses = meses;
 	this.interes = interes;
 	this.enganche = enganche;
-	this.añosExperiencia = añosExperiencia;
+	
     }
     /*
      * Metodo que cambia el nombre del vendedor
@@ -83,25 +83,11 @@ public class Vendedor{
 	return enganche;
     }
     /*
-     * Metodo que cambia el valor añosExperiencia
-     * @param añosExperiencia Tiempo de experiencia del vendedor en su campo
-     * */
-    public void setañosExperiencia(double añosExperiencia){
-	this.añosExperiencia = añosExperiencia;
-    }
-    /*
-     * Metodo que regresa el valor añosExperiencia
-     * @return añosExperiencia
-     * */
-    public double getañosExperiencia(){
-	return añosExperiencia;
-    }
-    /*
      * Metodo toString proporciona el valor de los atributos de nuestros objetos
      * @return nombre,añosExperiencia,enganche,meses,interes
      * */
     public String toString(){
-	return "Nombre:" + this.nombre + "Experiencia:" + this.añosExperiencia + "Enganche:" + this.enganche + "Meses:" + this.meses + "Interes:" + this.interes;
+	return "Nombre:" + this.nombre + "Enganche:" + this.enganche + "Meses:" + this.meses + "Interes:" + this.interes;
     }
 	
 }
