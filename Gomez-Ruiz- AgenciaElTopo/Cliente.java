@@ -28,7 +28,7 @@ public class Cliente{
      */
     public Cliente(String cliente, String contra){
 	this.cliente = cliente;
-	this.dinero = 0;
+	this.dinero = 70000.00;
 	this.contrasenia = contra;
     }
 
@@ -38,7 +38,7 @@ public class Cliente{
      */
     public Cliente(){
 	cliente = "Cliente default 1";
-	dinero = 5200.00;
+	dinero = 52000.00;
 	contrasenia = "kokoko";
     }
 

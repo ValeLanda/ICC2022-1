@@ -128,7 +128,7 @@ public class Vendedor{
     public String toString(Cliente p){
 	String s = "";
 	s += "Bienvenido cliente "+p.getCliente()+" a la Agencia ElTopo, soy su vendedor "+this.nombre+" y estoy aqu\u00ed para ayudarle en lo que necesite,"+
-	    " tranquilo puede confiar en mi al fin y al cabo soy un vendedor con "+this.estrellas+" de calificación y estoy completamente capacitado para brindarle ap            oyo";
+	    " tranquilo puede confiar en mi al fin y al cabo soy un vendedor con "+this.estrellas+" estrellas de calificación y estoy completamente capacitado para brindarle apoyo";
 	return s;
     }
 
@@ -142,7 +142,7 @@ public class Vendedor{
      */
     public String Adios(Cliente p){
 	String x = "";
-	x += "Muchas gracias cliente "+p.getCliente()+" por utilizar nuestros servicio, esperemos verlo pronto pr/u00f3ximamente";
+	x += "Muchas gracias cliente "+p.getCliente()+" por utilizar nuestros servicio, esperemos verlo pronto próximamente";
 	return x;
     }
 }
