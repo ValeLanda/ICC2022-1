@@ -6,7 +6,7 @@
  * */
 public class Vendedor{
     private String nombre;
-    private String meses;
+    private int meses;
     private double interes;
     private double enganche;
    
@@ -18,7 +18,7 @@ public class Vendedor{
      * @param interes interes
      * @param enganche enganche
      * */
-    public Vendedor(String nombre, String meses, double interes, double enganche){
+    public Vendedor(String nombre, int meses, double interes, double enganche){
 	this.nombre = nombre;
 	this.meses = meses;
 	this.interes = interes;
@@ -43,14 +43,14 @@ public class Vendedor{
      * Metodo que cambia el valor de meses
      * @param meses Valor de meses que propone el vendedor
      * */
-    public void setMeses(String meses){
+    public void setMeses(int meses){
 	this.meses = meses;
     }
     /*
      * Metodo que regresa el valor meses
      * @return meses 
      * */
-    public String getMeses(){
+    public int getMeses(){
 	return this.meses;
     }
     /*
@@ -80,13 +80,7 @@ public class Vendedor{
      * */
     public double getEnganche(){
 	return enganche;
-    }
-    /*
-     * Metodo toString proporciona el valor de los atributos de nuestros objetos
-     * @return nombre,añosExperiencia,enganche,meses,interes
-     * */
-    public String toString(){
-	return "Nombre:" + this.nombre + "Enganche:" + this.enganche + "Meses:" + this.meses + "Interes:" + this.interes;
+   
     }
 	
 }
