@@ -9,6 +9,7 @@ public class Vendedor {
   // Atributos del Vendedor.
     private String recibe; // se presenta con el cliente
     private String venta; // hace una venta
+    private String noventa; // Muestra el catálogo y despide al cliente.
     private String ticket; // entrega un ticket
     private String bye; // acompaña al cliente a la salida y lo despide.
   
@@ -16,13 +17,15 @@ public class Vendedor {
      * Constructor por omisión
      * @return : recibe
      * @return : venta
+     * @return : noventa
      * @return : ticket
      * @return : bye
      */
 
     public Vendedor (){
-	this.recibe = "Buenas tardes estimado cliente, sea usted bienvenido a la Agencia Trash, mi nombre es Nicolas Bourbaki, puede llamarme Nico si así lo prefiere. Estoy aquí para ayudarle a encontrar el auto de sus sueños" + "\n" + "Enseguida le mostraré los autos que la agencia tiene para usted.";
-	this.venta = "¡El auto que ha elegido es perfecto!, excelente elección. En un momento le entregaré su ticket de compra, ¿Desea pagar con tarjeta o en efectivo?";
+	this.recibe = "Buenas tardes estimado cliente, sea usted bienvenido a la Agencia Trash, mi nombre es Nicolas Bourbaki pero puede llamarme Nico si así lo prefiere. Estoy aquí para cobrar el auto de sus sueños que ha encontrado en nuestra preciada Agencia Trash.";
+	this.venta = "¡El auto que ha elegido es perfecto!, es uno de mis favoritos, lo felicito por su excelente elección. En un momento le entregaré su ticket de compra, ¿Desea pagar con tarjeta o en efectivo?";
+	this.noventa = "Fue un placer antenderle, ojalá pueda regresar pronto a la Agencia Trash, la cual promete para usted nuevos modelos de autos que le facinen para adquirir en su siguiente visita." + "\n" + "Gracias por su tiempo ¡Esperamos verlo pronto!.";
 	this.ticket = "¡Ya está todo listo!, hago entrega de su ticket de compra no sin antes recordarle que la agencia Trash agradece su preferencia, esperamos que disfrute de su auto tanto como nosotros disfrutamos su presencia.";
 	this.bye = "Hasta luego, de parte de la Agencia Trash le deseo que pase excelentes días junto a su nuevo compañero de viaje.";
     }
@@ -31,13 +34,15 @@ public class Vendedor {
      * Constructor con parámetros
      * @param : recibe
      * @param : venta
+     * @param : noventa
      * @param : ticket
      * @param : bye
      */
 
-    public Vendedor ( String recibe, String venta, String ticket, String bye ){
+    public Vendedor ( String recibe, String venta, String noventa, String ticket, String bye ){
 	this.recibe = recibe;
 	this.venta = venta;
+	this.noventa = noventa;
 	this.ticket = ticket;
 	this.bye = bye;
     }
@@ -46,6 +51,7 @@ public class Vendedor {
      * Acceso a características del vendedor.
      * @return : recibe
      * @return : venta
+     * @return : noventa
      * @return : ticket
      * @return : bye
      */
@@ -53,14 +59,18 @@ public class Vendedor {
 	return this.recibe = recibe;
     }
 
-    public String getVenta ( String venta ){
+    public String getSi ( String venta ){
 	return this.venta = venta;
+    }
+
+    public String getNo (String noventa){
+	return this.noventa = noventa;
     }
 
     public String getTicket ( String ticket ){
 	return this.ticket = ticket;
     }
-    public String getBye ( String Bye ){
+    public String getDespedida ( String Bye ){
 	return this.bye = bye;
     }
 
@@ -68,6 +78,7 @@ public class Vendedor {
      * Modificación de las características del Vendedor.
      * @param : recibe
      * @param : venta
+     * @param : noventa
      * @param : ticket
      * @param : bye
      */
@@ -75,15 +86,43 @@ public class Vendedor {
 	this.recibe = recibe;
     }
 
-    public void setVenta ( String venta ){
+    public void setSi ( String venta ){
 	this.venta = venta;
+    }
+
+    public void setNo ( String noventa ){
+	this.noventa = venta;
     }
 
     public void setTicket ( String ticket ){
 	this.ticket = ticket;
     }
-    public void setBye ( String bye ){
+    public void setDespedida ( String bye ){
 	this.bye = bye;
+    }
+
+    /**
+     * Métodos de comportamiento para imprimir dialogos del Vendedor
+     * @return : recibe
+     * @return : venta
+     * @return : noventa
+     * @return : ticket
+     * @return : despedida
+     */
+    public String toStringRecibe(){
+	return this.recibe; 
+    }
+    public String toStringSi(){
+	return this.venta; 
+    }
+    public String toStringNo(){
+	return this.noventa; 
+    }
+    public String toStringTicket(){
+	return this.ticket; 
+    }
+    public String toStringDespedida(){
+	return this.bye; 
     }
 }
 

@@ -149,7 +149,7 @@ public class Auto {
      * @return : precio
      */
     public String toString(){
-	return "El auto que la Agencia Trash puede ofrecerle cuenta con las siguientes características:" + "\n" + "\n" + "Marca: " + this.marca + "\n" + "Modelo: " + this.modelo + "\n" + "Tipo: " + this.tipo + "\n" + "Modo de manejo: " + this.modo + "\n" + "Color: " + this.color + " (Sujeto a cambios)" +  "\n" + "Número de llantas usadas: " + this.n_llantas + "\n" + "Número de puertas: " + this.n_puertas + "\n" + "Precio: " + this.precio; 
+	return "El auto que la Agencia Trash puede ofrecerle en esta sucursal cuenta con las siguientes características:" + "\n" + "\n" + "Marca: " + this.marca + "\n" + "Modelo: " + this.modelo + "\n" + "Tipo: " + this.tipo + "\n" + "Modo de manejo: " + this.modo + "\n" + "Color: " + this.color + " (Sujeto a cambios)" +  "\n" + "Número de llantas usadas: " + this.n_llantas + "\n" + "Número de puertas: " + this.n_puertas + "\n" + "Precio: " + this.precio; 
     }
 }
 
