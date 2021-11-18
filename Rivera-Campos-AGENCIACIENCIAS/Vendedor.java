@@ -17,7 +17,6 @@ public class Vendedor{
      * @param meses meses
      * @param interes interes
      * @param enganche enganche
-     * @param añosExperiencia añosExperiencia
      * */
     public Vendedor(String nombre, String meses, double interes, double enganche){
 	this.nombre = nombre;
