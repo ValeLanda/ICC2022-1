@@ -129,12 +129,5 @@ publi class Auto{
      * */
     public double getPrecio(){
 	    return this.precio;
-    }
-    /*
-     * Metodo toString muestra el valor de los atributos de los objetos
-     * @return marca,modelo,color,transmision,motor,año,precio
-     * */
-    public String toString(){
-           return "Marca:" + this.marca + "Modelo:" + this.modelo + "Color:"+ this.color + "Transmision:" + this.transmision + "Motor:" + this.motor + "Año:" + this.año + "Precio:" + this.precio;
     }	
 }
