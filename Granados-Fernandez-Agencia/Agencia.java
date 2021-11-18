@@ -58,7 +58,9 @@ public class Agencia {
             }else if (respuesta1.equals(auto5.getModelo())){
                 nuevoAuto = auto5;
             }else {
-                nuevoAuto = auto1;
+                System.out.println(vendedor1.sinModelo());
+                nuevoAuto=auto1;
+                System.exit(0);
             }
 
             System.out.println(vendedor1.color(nuevoAuto) + " " + vendedor1.deAcuerdo()); //Vendedor da a conocer el color disponible del auto y pregunta al usuario si está de acuerdo.
@@ -115,7 +117,68 @@ public class Agencia {
                 }
             break;
         case 2:
-            System.out.println("caso2");
+            System.out.println(vendedor2.presentarse());
+            System.out.println(vendedor2.modeloAComprar());
+            String respuesta4 = scan.nextLine();
+            respuesta4 = respuesta4.toUpperCase().trim();
+
+            Auto newAuto;
+            //Condicional dependiendo del modelo que elija el usuario
+            if (respuesta4.equals(auto1.getModelo())){
+                newAuto = auto1;
+            }else if (respuesta4.equals(auto2.getModelo())){
+                newAuto = auto2;
+            }else if (respuesta4.equals(auto3.getModelo())){
+                newAuto = auto3;
+            }else if (respuesta4.equals(auto4.getModelo())){
+                newAuto = auto4;
+            }else if (respuesta4.equals(auto5.getModelo())){
+                newAuto = auto5;
+            }else {
+                System.out.println(vendedor2.sinModelo());
+                newAuto = auto1;
+                System.exit(0);
+            }
+
+            System.out.println(vendedor2.preguntarColor());
+            String color= scan.nextLine();
+            newAuto.setColor(color);
+
+            double aPagar;
+            String tipoAuto = newAuto.getTipoAuto();
+            if (tipoAuto.equals("de lujo")){
+                aPagar = newAuto.getCosto() * 3; 
+            }else if (tipoAuto.equals("deportivo")){
+                aPagar = newAuto.getCosto();
+            }else{
+                aPagar = newAuto.getCosto();
+            }
+
+            System.out.println(vendedor2.servicio());
+            respuesta4 = scan.nextLine();
+            if (respuesta4.equals("si")){
+                aPagar = aPagar - 30000;
+            }
+            newAuto.setCosto(aPagar);
+
+            System.out.println(vendedor2.pedirDatos());
+            String nombreCliente = scan.nextLine();
+            String apellido1= scan.nextLine();
+            String apellido2= scan.nextLine();
+
+            Cliente cliente4 = new Cliente(nombreCliente, apellido1, apellido2);
+            cliente4.setNoCliente(12345);
+            cliente4.setFormaPago("tarjeta");
+            cliente4.setImporte(aPagar);
+            cliente4.setAuto(newAuto);
+            cliente4.setAdquisicion(1);
+
+            System.out.println(vendedor2.ticket(cliente4));
+
+
+            
+
+
             break;
         case 3:
             System.out.println("Saliendo");

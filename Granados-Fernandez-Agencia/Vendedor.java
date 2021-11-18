@@ -93,7 +93,7 @@ public class Vendedor {
      * @return La presentación del vendedor
      */
     public String presentarse() {
-        return "Hola, buen día, mi nombre es " + nombre + " y estoy aquí para ayudarl@ a elegir su auto. ";
+        return "Hola, buen día, mi nombre es " + nombre + " y estoy aquí para ayudarl@. ";
     }
 
     /**
@@ -140,7 +140,7 @@ public class Vendedor {
      * @return La pregunta del color deseado
      */
     public String preguntarColor(){
-        return "¿Qué color es el que busca?";
+        return "¿Qué color quiere?";
     }
 
     /**
@@ -180,11 +180,46 @@ public class Vendedor {
     }
 
     /**
+     * Metodo que hace que el vendedor preguntae el modelo a comprar
+     * @return la pregunta del modelo
+     */
+    public String modeloAComprar(){
+        return "¿Cuál es el modelo que comprará?";
+    }
+
+    /**
+     * Metodo sinModelo avisa que ese modelo de auto no está disponible en la agencia
+     * @return El aviso
+     */
+    public String sinModelo(){
+        return "Ese auto no lo manejamos en esta agencia, favor de regreser a la parte de \"Ver autos\"";
+    }
+
+    /**
      * Metodo toString nos dice las características del vendedor
      * @return Las caracteristicas del vendedor
      */
     public String toString(){
         return "Vendedor: " + nombre + "\nNo. vendedor: "+ noVendedor;
     }
+
+    /**
+     * Metodo ticket da al cliente su ticket
+     * @param cliente El cliente
+     * @return El ticket
+     */
+    public String ticket(Cliente cliente){
+        return "\n **Ticket** \nLe atendió: \n" + this.toString() + "\nCliente:\n"+ cliente.toString() + "Importe: " + cliente.getImporte() + "\nAuto adquirido: " + cliente.getAuto();
+    }
+
+    /**
+     * Metodo pedirDatos hace que el vendedor pida datos del cliente
+     * @return La pregunta de los datos del cliente
+     */
+    public String pedirDatos(){
+        return "¿Cuál es su nombre completo? (Favor de introducir nombre <enter> apellido paterno <enter> apellido materno <enter>)";
+    }
+
+    
 
 }

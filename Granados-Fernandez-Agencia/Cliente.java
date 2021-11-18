@@ -147,6 +147,6 @@ public class Cliente {
      * @return Las características del cliente
      */
     public String toString(){
-        return "No. Cliente: " + noCliente + "\nNombre: " + nombre + " " + apellido1 + " " + apellido2 + "\nImporte a pagar: " + importe + "Forma de pago: " + formaPago;
+        return "No. Cliente: " + noCliente + "\nNombre: " + nombre + " " + apellido1 + " " + apellido2 + "\nImporte a pagar: " + importe + "\nForma de pago: " + formaPago;
     }
 }

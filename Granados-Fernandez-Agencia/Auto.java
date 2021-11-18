@@ -3,6 +3,7 @@
  * 
  * @author Melissa Fernandez
  * @author Jose Pablo Granados
+ * @version 1.0
  */
 public class Auto {
 
