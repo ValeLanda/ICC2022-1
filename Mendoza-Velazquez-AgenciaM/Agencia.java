@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-public class agencia {
+public class Agencia {
     public static void main(String[] args) {
         //Es el nombre del usuario
         String nombre;
